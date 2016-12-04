@@ -85,58 +85,58 @@ function draw_map(type_of_disaster) {
               this.flag = this.code;
         });
 // console.log("arra0   " +JSON.stringify(arr));
-        $('#container11').highcharts('Map', {
+            $('#container11').highcharts('Map', {
 
-            title: {
-                text: 'Global distribution of '+ type_disaster
-            },
-
-            legend: {
                 title: {
-                    text: type_disaster_caps,
-                    style: {
-                        color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                    text: 'Global Seismic Distribution'
+                },
+
+                legend: {
+                    title: {
+                        text: 'No of occurances',
+                        style: {
+                            color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
+                        }
                     }
-                }
-            },
+                },
 
-            mapNavigation: {
-                enabled: true,
-                buttonOptions: {
-                    verticalAlign: 'bottom'
-                }
-            },
-
-            tooltip: {
-                backgroundColor: 'none',
-                borderWidth: 0,
-                shadow: false,
-                useHTML: true,
-                padding: 0,
-                pointFormat: '<span class="f32"><span class="flag {point.flag}"></span></span>' +
-                    ' {point.name}: <b>{point.value}</b>/times',
-                positioner: function () {
-                    return { x: 0, y: 250 };
-                }
-            },
-
-            colorAxis: {
-                min: 1,
-                max: 1000,
-                type: 'logarithmic'
-            },
-
-            series : [{
-                data : arr,
-                mapData: Highcharts.maps['custom/world'],
-                joinBy: ['iso-a3', 'code'],
-                name: type_disaster_caps,
-                states: {
-                    hover: {
-                        color: 'Yellow'
+                mapNavigation: {
+                    enabled: true,
+                    buttonOptions: {
+                        verticalAlign: 'bottom'
                     }
-                }
-            }]
+                },
+
+                tooltip: {
+                    backgroundColor: 'none',
+                    borderWidth: 0,
+                    shadow: false,
+                    useHTML: true,
+                    padding: 0,
+                    pointFormat: '<span class="f32"><span class="flag {point.flag}"></span></span>' +
+                        ' {point.name}: <b>{point.value}</b>/times',
+                    positioner: function () {
+                        return { x: 0, y: 250 };
+                    }
+                },
+
+                colorAxis: {
+                    min: 1,
+                    max: 1000,
+                    type: 'logarithmic'
+                },
+
+                series : [{
+                    data : arr,
+                    mapData: Highcharts.maps['custom/world'],
+                    joinBy: ['iso-a3', 'code'],
+                    name: type_disaster_caps,
+                    states: {
+                        hover: {
+                            color: 'Yellow'
+                        }
+                    }
+                }]
+            });
         });
-    });
 }

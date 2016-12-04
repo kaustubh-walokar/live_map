@@ -12,10 +12,6 @@ function draw_chart(type_disaster) {
         contentType: "application/json; charset=utf-8",
 
         success: function(data, status, jqXHR) {
-
-
-           
-
             for (var i = 0; i < data.count; i++) {
                 if (data.disasters[i].fields.date.created) {
                     data.disasters[i].fields.date.created = data.disasters[i].fields.date.created.replace(data.disasters[i].fields.date.created.substring(4, data.disasters[i].fields.date.created.length), "");
@@ -95,8 +91,11 @@ function draw_chart(type_disaster) {
 
 
             $('#chart-container').highcharts({
+            	 chart: {
+                     type: 'column'
+                 },
                 title: {
-                    text: type_disaster[0].toUpperCase()+type_disaster.substring(1,type_disaster.length),
+                    text: "SEISMIC ACTIVITY",
                     x: -20 //center
                 },
                 subtitle: {
@@ -106,12 +105,14 @@ function draw_chart(type_disaster) {
                 yAxis: {
                     title: {
                         text: 'Occurrence'
-                    },
-                    plotLines: [{
-                        value: 0,
-                        width: 1,
-                        color: '#808080'
-                    }]
+                    }
+                },
+                plotOptions: {
+                	column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0,
+                        color: "#04379b"
+                     }
                 },
                 tooltip: {
                     valueSuffix: ' Times'

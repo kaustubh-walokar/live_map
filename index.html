@@ -7,13 +7,13 @@
     <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Disaster Information System</title>
-    <meta name="description" content="Cataclysm is an informative website for information about natural disasters like earthquakes, tornados, floods, tsunamis and volcanoes">
-    <meta name="keywords" content="cataclysm, disaster alerts, disaster, natural disaster, volcano, tornado, floods, earthquakes">
-    <meta name="author" content="awaise267@gmail.com">
-    
+     <meta name="description" content="Seismic is an informative real-time data visualization website for information about earthquakes">
+    <meta name="keywords" content="seismic, disaster, natural calamity, earthquake, real-time, heatmaps, globe, maps, quake">
+    <meta name="author" content="navin1211@gmail.com">
+   
     <!-- Favicons
     ================================================== -->
-    <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/icon_1.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
@@ -132,14 +132,11 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#tf-home" class="page-scroll">Home</a></li>
-            <li><a href="#tf-services" class="page-scroll">Disasters</a></li>
+               <li><a href="#tf-services" class="page-scroll">Services</a></li>
             <li><a href="#tf-about" class="page-scroll">About</a></li>
             <li><a href="#tf-team" class="page-scroll">Team</a></li>
             <li><a href="#tf-contact" class="page-scroll">Contact</a></li>
-			<li><a id="locale-link" href="/?locale=es_mx">Spanish</a></li>
-            <li><a href="/livemap">Live Map</a></li>
-            <li><a href="/heatmap">Heat Map</a></li>
-            <li><a href="/globe">Globe</a></li>
+
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -163,40 +160,55 @@
     <div id="tf-services" class="text-center">
         <div class="container">
             <div class="section-title center">
-                <h2>Take a look at <strong>the statistics</strong></h2>
+                <h2>Take a look at the <strong> services</strong> we provide</h2>
                 <div class="line">
                     <hr>
                 </div>
                 <div class="clearfix"></div>
                 <div style="width:60%; margin:0 auto; word-wrap:break-word;">
                 <small><em>
-                	Click on the below icons to view the statistics for <strong>earthquakes, tsunamis, tornados, floods </strong>and <strong>volcanoes.</strong>
-                	Comprehensive statistics for natural disaster data available from all of our sources can be viewed <a href="/all-disasters">here</a>.
+
+                	Our services shows various visualizations of <strong>real-time </strong> earthquake data. Click on the below icons to have a look at earthquake <strong>heat-maps</strong>, Maps displaying <strong>geo locations</strong> of earth quake data and have a real<strong> 3D globe view </strong>experience with webGL globe
                 </em></small>
                 </div>
             </div>
             <div class="space"></div>
             <div class="row">
-                <div class="col-md-2 col-md-offset-1 service">
+       
+            
+            
+            
+            <div class="col-md-2"> </div> 
+                <div class="col-md-2 service">
+                <a id="lnk-1" href="/livemap" style="hover:none;"></a><i class="fa fa-map-marker" onclick="link_click(1)"></i>
+                     <h4><strong>Live map</strong></h4>
+                    <p>Click to see the live earthquake data along with its magnitude and <strong>distance of the place from you</strong>. Be safe!</p>
                     
                 </div>
 
                 <div class="col-md-2 service">
-                   
-                </div>
-
-                <div class="col-md-2 service">
-            <a id="lnk-1" href="/earthquakes"></a><i class="fa2 icon-noun-77272-cc" onclick="link_click(1)"></i>
-                    <h4><strong>Earthquakes</strong></h4>
+                 <a id="lnk-2" href="/earthquakes" style="hover:none;"></a><i class="fa fa-bar-chart" onclick="link_click(2)"></i>
+                    <h4><strong>Statistics</strong></h4>
                     <p>Click to see the statistics recorded for <strong><span id="earthquake-count"></span> earthquakes</strong></p>
                 </div>
 
                 <div class="col-md-2 service">
-                    
+                     <a id="lnk-3" href="/heatmap" style="hover:none;"></a><i class="fa fa-area-chart" onclick="link_click(3)"></i>
+                    <h4><strong>Heatmaps</strong></h4>
+                    <p>Want to know the intensity of the natural calamity? Click the above icon to visualize the intensity of earthquake through <strong> heat maps </strong> </p>
+     
                 </div>
+                
+                <div class="col-md-2 service">
+                 <a id="lnk-4" href="/globe" style="hover:none;"></a><i class="fa fa-globe" onclick="link_click(4)"></i>
+                    <h4><strong>3D Globe</strong></h4>
+                    <p>Click to visually see the earthquake data on a <strong> 3D globe </strong> Know your surroundings better.</p>
+                             
+                </div>
+                
                 <div class="col-md-2 service">
                   
-                </div>
+                </div> 
 
             </div>
         </div>
@@ -209,7 +221,7 @@
             <div class="container">
 
                 <div class="section-title center">
-                    <h2>Some of <strong>our data sources</strong> for the natural disasters data</h2>
+                      <h2>Our <strong>Data provider</strong> for the real-time Earthquake data is</h2>
                     <div class="line">
                         <hr>
                     </div>
@@ -274,7 +286,8 @@
                 <div id="team" class="owl-carousel owl-theme row">
                     <div class="item">
                         <div class="thumbnail">
-                            <img src="img/team/03.jpg" alt="..." class="img-circle team-img">
+
+                             <img src="img/team/02.jpg" alt="..." class="img-circle team-img">
                             <div class="caption">
                                 <h3>Kaustubh Walokar</h3>
                                 <p>Developer</p>
@@ -296,7 +309,8 @@
 
                     <div class="item">
                         <div class="thumbnail">
-                            <img src="img/team/02.jpg" alt="..." class="img-circle team-img">
+
+                            <img src="img/team/03.jpg" alt="..." class="img-circle team-img">
                             <div class="caption">
                                 <h3>Piyush Patil</h3>
                                 <p>Developer</p>

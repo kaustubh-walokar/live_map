@@ -160,7 +160,7 @@ app.get("/nearest", function(req, res) {
 app.use(function (req, res, next) {
     if ('/robots.txt' == req.url) {
         res.type('text/plain')
-        res.send("User-agent: *\nDisallow: /");
+        res.send("User-agent: *\nAllow: /");
     } else {
         next();
     }

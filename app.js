@@ -174,7 +174,7 @@ app.get('/map', function(req, res){
 	res.sendfile("map.html");
 });
 
-app.get('/earthquakes', function(req, res){
+app.get('/statistics', function(req, res){
 	res.sendfile("earthquakes.html");
 });
 

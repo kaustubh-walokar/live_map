@@ -88,6 +88,14 @@ var todos = angular.module('page', ['ui.bootstrap']);
             });
             
             todos.controller('cntrlPage2', function($scope,$http,$rootScope) {
+            	
+            	/*localization code */
+            	function localize($scope, $locale){
+            		$scope.localeId = $locale.id;
+            	
+            	}
+            	
+            	
                 $scope.filteredTodos = []
                ,$scope.currentPage = 1
                ,$scope.numPerPage = 10

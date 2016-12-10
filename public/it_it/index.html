@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    
     <!-- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
@@ -14,35 +13,41 @@
    
     <!-- Favicons
     ================================================== -->
-    <link rel="shortcut icon" href="img/icon_1.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="../img/icon_1.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
 
     <!-- Bootstrap -->
-    <!-- <link rel="stylesheet" type="text/css"  href="css/bootstrap.css"> -->
+   
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
 	
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  	<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 	
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.5.9/angular-locale_it-it.js"></script>
+	
+	
+    <link rel="stylesheet" type="text/css" href="../fonts/font-awesome/css/font-awesome.css">
 
     <!-- Slider
     ================================================== -->
-    <link href="css/owl.carousel.css" rel="stylesheet" media="screen">
-    <link href="css/owl.theme.css" rel="stylesheet" media="screen">
+    <link href="../css/owl.carousel.css" rel="stylesheet" media="screen">
+    <link href="../css/owl.theme.css" rel="stylesheet" media="screen">
 
     <!-- Stylesheet
     ================================================== -->
-    <link rel="stylesheet" type="text/css"  href="css/style.css"> <!-- Stylesheet -->
-    <link rel="stylesheet" type="text/css"  href="css/styles.css"> <!-- font icons -->
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css"  href="../css/style.css"> <!-- Stylesheet -->
+    <link rel="stylesheet" type="text/css"  href="../css/styles.css"> <!-- font icons -->
+    <link rel="stylesheet" type="text/css" href="../css/responsive.css">
 
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400' rel='stylesheet' type='text/'>
 
-    <script type="text/javascript" src="js/modernizr.custom.js"></script>
+    <script type="text/javascript" src="../js/modernizr.custom.js"></script>
 	
 	<style>
 	
@@ -64,9 +69,12 @@
 	
 	</style>
 	
+
+
+
 	<script>
 		$(document).ready(function(){
-						
+			
 			$.ajax({
 	    		  type: "GET",
 	    		  url: "/disaster-counts",
@@ -84,7 +92,12 @@
 			var link_id = "#lnk-"+id;		
 			window.location.href = $(link_id)[0].href;
 		}
+		
+		
 	</script>
+	
+
+	
 	
 	
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -94,18 +107,24 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     
-    	
+    	 
+    
   </head>
   
   <body ng-app="mainModule">
-   
+  
+  <div ng-controller="mainController">
+  
+  
+  
+  
     <!-- Navigation
     ==========================================-->
 	
 	
     <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-      
+      <div id="google_translate_element"></div>
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -123,11 +142,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#tf-home" class="page-scroll">Home</a></li>
-            <li><a href="#tf-services" class="page-scroll">Services</a></li>
-            <li><a href="#tf-about" class="page-scroll">About</a></li>
-            <li><a href="#tf-team" class="page-scroll">Team</a></li>
-            <li><a href="#tf-contact" class="page-scroll">Contact</a></li>
+            <li><a href="#tf-home" class="page-scroll">Casa</a></li>
+               <li><a href="#tf-services" class="page-scroll">Servizi</a></li>
+            <li><a href="#tf-about" class="page-scroll">Di</a></li>
+            <li><a href="#tf-team" class="page-scroll">Squadra</a></li>
+            <li><a href="#tf-contact" class="page-scroll">Contatto</a></li>
 
           </ul>
         </div><!-- /.navbar-collapse -->
@@ -136,60 +155,69 @@
       </div><!-- /.container-fluid -->
     </nav>
     
+    
+
     <!-- Home Page
     ==========================================-->
     <div id="tf-home" class="text-center">
         <div class="overlay">
             <div class="content">
-                <h1><strong><span class="color">seismic</span></strong></h1>
-                <p class="lead" style="max-width:50%; margin:0 auto; word-wrap: break-word; font-size:16px;"><span>An informative visualization of realtime </span><strong>Earthquake</strong> data </p>
+                <h1><strong><span class="color">sismico</span></strong></h1>
+                <p class="lead" style="max-width:50%; margin:0 auto; word-wrap: break-word; font-size:16px;"><span>Una visualizzazione informativa dei dati <strong>Terremoto</strong> in tempo reale </p>
                 <a href="#tf-about" class="fa fa-angle-down page-scroll"></a>
             </div>
         </div>
     </div>
-   
+    
+
     <!-- Services Section
     ==========================================-->
     <div id="tf-services" class="text-center">
         <div class="container">
             <div class="section-title center">
-                <h2>Take a look at the <strong> services</strong> we provide</h2>
+                <h2>Date un'occhiata ai <strong> servizi </strong> che forniamo</h2>
                 <div class="line">
                     <hr>
                 </div>
                 <div class="clearfix"></div>
                 <div style="width:60%; margin:0 auto; word-wrap:break-word;">
-                <small><em> Our services shows various visualizations of <strong>real-time </strong> earthquake data. Click on the below icons to have a look at earthquake <strong>heat-maps</strong>, Maps displaying <strong>geo locations</strong> of earth quake data and have a real<strong> 3D globe view </strong>experience with webGL globe
+                <small><em>
+I nostri servizi mostra diverse visualizzazioni di dati sui terremoti in <Strong>tempo reale</Strong>. Clicca sulle icone qui sotto per dare un'occhiata al terremoto <Strong>di calore mappe</Strong>, mappe mostrando <strong>luoghi geografici</strong> di dati terremoto e hanno un vero e proprio <strong>3D globo</strong> esperienza con WebGL globo
+             
                 </em></small>
                 </div>
             </div>
             <div class="space"></div>
             <div class="row">
+       
+            
+            
+            
             <div class="col-md-2"> </div> 
                 <div class="col-md-2 service">
                 <a id="lnk-1" href="/livemap" style="hover:none;"></a><i class="fa fa-map-marker" onclick="link_click(1)"></i>
-                     <h4><strong>Live map</strong></h4>
-                    <p>Click to see the live earthquake data along with its magnitude and <strong>distance of the place from you</strong>. Be safe!</p>
+                     <h4><strong>mappa in diretta</strong></h4>
+                    <p>Clicca qui per vedere i dati sui terremoti in <strong>tempo reale</strong> con la sua grandezza e la distanza del luogo da voi. Stai attento!</p>
                     
                 </div>
 
                 <div class="col-md-2 service">
-                 <a id="lnk-2" href="/earthquakes" style="hover:none;"></a><i class="fa fa-bar-chart" onclick="link_click(2)"></i>
-                    <h4><strong>Statistics</strong></h4>
-                    <p>Click to see the statistics recorded for <strong><span id="earthquake-count"></span> earthquakes</strong></p>
+                 <a id="lnk-2" href="earthquakes.html" style="hover:none;"></a><i class="fa fa-bar-chart" onclick="location.href = 'earthquakes.html';"></i>
+                    <h4><strong>statistica</strong></h4>
+                    <p>Clicca per vedere le statistiche registrate per  <strong> <span id="earthquake-count"></span> </strong> terremoti</p>
                 </div>
 
                 <div class="col-md-2 service">
                      <a id="lnk-3" href="/heatmap" style="hover:none;"></a><i class="fa fa-area-chart" onclick="link_click(3)"></i>
-                    <h4><strong>Heatmaps</strong></h4>
-                    <p>Want to know the intensity of the natural calamity? Click the above icon to visualize the intensity of earthquake through <strong> heat maps </strong> </p>
+                    <h4><strong>heatmaps</strong></h4>
+                    <p>Vuoi conoscere l'intensità della calamità naturale? Fare clic sull'icona qui sopra per visualizzare l'intensità del sisma attraverso <strong>mappe di calore</strong></p>
      
                 </div>
                 
                 <div class="col-md-2 service">
                  <a id="lnk-4" href="/globe" style="hover:none;"></a><i class="fa fa-globe" onclick="link_click(4)"></i>
-                    <h4><strong>3D Globe</strong></h4>
-                    <p>Click to visually see the earthquake data on a <strong> 3D globe </strong> Know your surroundings better.</p>
+                    <h4><strong>3D Globo</strong></h4>
+                    <p>Clicca qui per vedere visivamente i dati del terremoto su un <strong>globo 3D </strong>Conoscere meglio l'ambiente circostante.</p>
                              
                 </div>
                 
@@ -208,16 +236,17 @@
             <div class="container">
 
                 <div class="section-title center">
-                      <h2>Our <strong>Data provider</strong> for the real-time Earthquake data is</h2>
+                      <h2>IL <Strong>PROVIDER DATI</Strong> PER IL TEMPO REALE DEI DATI TERREMOTO è</h2>
                     <div class="line">
                         <hr>
                     </div>
                 </div>
+              
                 
                 <div id="clients" class="section-title center">
                     
                     <div class="item">
-                        <img src="img/client/04.png">
+                        <img src="../img/client/04.png">
                     </div>
                 </div>
 
@@ -231,26 +260,26 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="img/02.jpg" style="max-width:80%; border-radius:7px; box-shadow: 10px 7px 5px #888888;" class="img-responsive">
+                    <img src="../img/02.jpg" style="max-width:80%; border-radius:7px; box-shadow: 10px 7px 5px #888888;" class="img-responsive">
                 </div>
                 <div class="col-md-6">
                     <div class="about-text">
                         <div class="section-title">
-                            <h4>About Seismic</h4>  
+                            <h4>SISMICA DI</h4>  
                            
-                            <h3><strong>What is the need of data visualization for </strong> Earthquake data?</h3>
+                            <h3><strong>Qual è la necessità di visualizzazione dei </strong> dati per i dati di terremoto?</h3>
                             <hr style="width:100%;>
                             <div class="clearfix"></div>
                         </div>
-                        <p class="intro" style="font-size:13px; text-align:justify;">There are websites which provide real-time data and prediction of earthquake. But they do not provide visualization of real-time data to users. We have mapped the data from actual USGS website on the map which helps user to be aware of his surrounding environment. This application also displays the users actual location on the map and distance of the user from the earthquake prone place.</p>
+                        <p class="intro" style="font-size:13px; text-align:justify;">Ci sono siti che forniscono dati in tempo reale e la previsione di terremoti. Ma essi non forniscono la visualizzazione dei dati in tempo reale per gli utenti. Abbiamo mappato i dati dal sito attuale USGS sulla mappa che aiuta l'utente di essere a conoscenza del suo ambiente circostante. Questa applicazione visualizza anche la utenti posizione attuale sulla mappa e la distanza dell'utente dal luogo prona terremoto.</p>
                         <ul class="about-list">
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
-                                <strong>Motto</strong> - <em>Prevention is better than cure.</em>
+                                <strong>Motto</strong> - <em>Prevenire è meglio che curare.</em>
                             </li>
                             <li>
                                 <span class="fa fa-dot-circle-o"></span>
-                                <strong>Deliverables</strong> - <em>Real-time data visualization, responsive website</em>
+                                <strong>prodotti finali</strong> - <em>Visualizzazione in tempo reale dei dati, il sito reattivo</em>
                             </li>
                             
                         </ul>
@@ -266,7 +295,7 @@
         <div class="overlay">
             <div class="container">
                 <div class="section-title center">
-                    <h2>Meet <strong>our team</strong></h2>
+                    <h2>Incontrate il<strong> nostro team </strong></h2>
                     <div class="line">
                         <hr>
                     </div>
@@ -276,10 +305,10 @@
                     <div class="item">
                         <div class="thumbnail">
 
-                             <img src="img/team/02.jpg" alt="..." class="img-circle team-img">
+                             <img src="../img/team/02.jpg" alt="..." class="img-circle team-img">
                             <div class="caption">
                                 <h3>Kaustubh Walokar</h3>
-                                <p>Developer</p>
+                                <p>sviluppatore</p>
                                 <p><a href="mailto:kaustubh.walokar@sjsu.edu">kaustubh.walokar@sjsu.edu</a></p>
                             </div>
                         </div>
@@ -287,10 +316,10 @@
 
                     <div class="item">
                         <div class="thumbnail">
-                            <img src="img/team/01.jpg" alt="..." class="img-circle team-img">
+                            <img src="../img/team/01.jpg" alt="..." class="img-circle team-img">
                             <div class="caption">
                                 <h3>Navinkumar Patil</h3>
-                                <p>Developer</p>
+                                <p>sviluppatore</p>
                                 <p><a href="mailto:navinkumar.patil@sjsu.edu">navinkumar.patil@sjsu.edu</a></p>
                             </div>
                         </div>
@@ -298,10 +327,10 @@
 
                     <div class="item">
                         <div class="thumbnail">
-                            <img src="img/team/05.jpg" alt="..." class="img-circle team-img">
+                            <img src="../img/team/05.jpg" alt="..." class="img-circle team-img">
                             <div class="caption">
                                 <h3>Swathi Nuggehalli Sudarshan</h3>
-                                <p>Developer</p>
+                                <p>sviluppatore</p>
                                 <p><a href="mailto:swathi.nuggehallisudarshan@sjsu.edu">swathi.nuggehallisudarshan@sjsu.edu</a></p>
                             </div>
                         </div>
@@ -309,22 +338,24 @@
 
                     <div class="item">
                         <div class="thumbnail">
-                            <img src="img/team/04.jpg" alt="..." class="img-circle team-img">
+                            <img src="../img/team/04.jpg" alt="..." class="img-circle team-img">
                             <div class="caption">
                                 <h3>Ruta Dhekane</h3>
-                                <p>Developer</p>
+                                <p>sviluppatore</p>
                                 <p><a href="mailto:ruta.dhekane@sjsu.edu">ruta.dhekane@sjsu.edu</a></p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="item">
+                   
+
+                     <div class="item">
                         <div class="thumbnail">
 
-                            <img src="img/team/03.jpeg" alt="..." class="img-circle team-img">
+                            <img src="../img/team/03.jpeg" alt="..." class="img-circle team-img">
                             <div class="caption">
                                 <h3>Piyush Patil</h3>
-                                <p>Developer</p>
+                                <p>sviluppatore</p>
                                 <p><a href="mailto:piyush.patil@sjsu.edu">piyush.patil@sjsu.edu</a></p>
                             </div>
                         </div>
@@ -344,38 +375,38 @@
                 <div class="col-md-8 col-md-offset-2">
 
                     <div class="section-title center">
-                        <h2>Feel free to <strong>contact us</strong></h2>
+                        <h2>Non esitate a <strong>contattarci</strong></h2>
                         <div class="line">
                             <hr>
                         </div>
                         <div class="clearfix"></div>
-                        <small><em>We would love to hear from you! Send us your feedback using the below form.</em></small>            
+                        <small><em>Ci piacerebbe avere tue notizie! Inviaci il tuo feedback utilizzando il modulo sottostante.</em></small>            
                     </div>
 
                     <form id="send-email">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
+                                    <label for="exampleInputEmail1">Indirizzo email</label>
                                     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your email" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Name</label>
+                                    <label for="exampleInputPassword1">Nome</label>
                                     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Your Name" required>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Message</label>
+                            <label for="exampleInputEmail1">Messaggio</label>
                             <textarea id="exampleInputText" class="form-control" rows="3"></textarea>
                         </div>
                         <div id="success-message" class="form-group hidden">
-                            <p>Feedback sent successfully!</p>
+                            <p>Commenti inviata con successo!</p>
                         </div>
                         
-                        <button type="button" onclick="form_submit();" class="btn tf-btn btn-default">Submit</button>
+                        <button type="button" onclick="form_submit();" class="btn tf-btn btn-default">invio</button>
                     </form>
 
                 </div>
@@ -404,19 +435,18 @@
     		  }
     	});
     	
-    	$('#send-email')[0].reset();  	
+    	$('#send-email')[0].reset();
+    	
     }
     
     </script>
 
     <nav id="footer">
-        <div class="container" ng-controller="mainController">
+        <div class="container">
             <div class="pull-right fnav">
-                <ul class="footer-social">
-                	<!--  localization navigation start -->    
-                    <li><a href="#">English (USA) </a></li>
-                    <li><a href="it_it/">Italian </a></li>       
-                    <!-- localization nav end -->
+                <ul class="footer-social">    
+                    <li><a href="../en_us/">English (USA) </a></li>
+                    <li><a href="#">Italian </a></li>       
                     <li></li>
                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -424,9 +454,9 @@
             </div>
         </div>
     </nav>
+</div>
 
-
-	<!--  Angular Controller for localization  -->
+	<!--  angular controller for localization  -->
 	<script type="text/javascript">
 	angular.module("mainModule",["ngLocale"])
 	.controller("mainController", function($scope, $locale){
@@ -440,14 +470,14 @@
     <!--  <script type="text/javascript" src="js/jquery.1.11.1.js"></script> -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- <script type="text/javascript" src="js/bootstrap.js"></script> -->
-    <script type="text/javascript" src="js/SmoothScroll.js"></script>
-    <script type="text/javascript" src="js/jquery.isotope.js"></script>
+    <script type="text/javascript" src="../js/SmoothScroll.js"></script>
+    <script type="text/javascript" src="../js/jquery.isotope.js"></script>
 
-    <script src="js/owl.carousel.js"></script>
+    <script src="../js/owl.carousel.js"></script>
 
     <!-- Javascripts
     ================================================== -->
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
 
   </body>
 </html>

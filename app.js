@@ -23,7 +23,7 @@ app.use(app.router);
 app.use(express.static(__dirname + "/public"));
 
 app.configure(function(){
-	  app.set('port', process.env.PORT || 80);
+	  app.set('port', process.env.PORT || 8080);
 	  app.set('views', __dirname + '/views');
 	  app.set('view engine', 'ejs');
 	  app.use(favicon(__dirname + '/public/img/icon.ico'));
@@ -160,7 +160,7 @@ app.get("/nearest", function(req, res) {
 app.use(function (req, res, next) {
     if ('/robots.txt' == req.url) {
         res.type('text/plain')
-        res.send("User-agent: *\nDisallow: /");
+        res.send("User-agent: *\nAllow: /");
     } else {
         next();
     }
